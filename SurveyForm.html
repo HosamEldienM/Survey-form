@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body{
+            
+         background-image: url("./colored-pencils.jpg");
+         background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+        }
+        #main{
+            font-family: Verdana, Tahoma, sans-serif;
+            margin: auto;
+         width: 55%;
+          background-color: rgb(42, 5, 77);
+          color: rgb(255, 249, 249);
+          border-radius: 30px;
+          background-color:rgba(255, 255, 255, 0.1);
+          backdrop-filter:blur(20px);
+        }
+   
+
+
+
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        input[type=text],input[type=email],input,input[type=number], select, textarea{
+            display: block;
+            border-radius: 10px;
+           margin: 8px;
+           margin-left: 15px;
+         width: 65%;
+         border: 0rem;
+         padding: .8rem;
+        }
+      label{
+     
+          padding-left: 1rem;
+          margin-top: 2rem;
+          
+      }
+
+        input[type=checkbox],input[type=radio]{
+            display:inline;
+            min-height: 1rem;
+            margin-left: 15px;
+            min-width: 1rem;
+            width: 0%;
+        }
+
+        #recommend, #improve, #option{
+            display: block;
+        }
+        .radio-label, .check-label{
+            padding-left: 0rem;
+            align-items: center;
+        }
+        @media only screen and (max-width: 500px) {
+            #main{
+         width: 85%;
+        }
+    
+}
+        option[value=""] {
+        display: none;
+      }
+       input[type=submit]{
+        display: block;
+         width: 80%;
+         margin: auto;
+         margin-top: 2rem;
+         margin-bottom: 1rem;
+         background-color: rgb(38, 32, 39);
+         color: white;
+       } 
+    </style>
+</head>
+<body>
+    <div id="main">
+    <h1 id="title">survey form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+        <label id="name-label">name</label>
+       <input type="text" id="name" placeholder="Enter your name" required>
+       <label id="email-label">email</label>
+       <input type="email" id="email" required placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+       <label id="number-label">Age(optional)</label>
+       <input type="number" id="number" placeholder="age"  min="16" max="80">
+        <label for="" id="option">wich option best describes your current role</label>
+       <select id="dropdown" placeholder="select current role" >
+        <option   value="" disabled selected>select current role</option>
+           <option>student</option>
+           <option>Full Time Job</option>
+           <option>Full Time Learner</option>
+           <option>other</option>
+       </select>
+        <label id="recommend">Would you recommend freeCodeCamp to a friend?</label>
+       <input id="definitely" type="radio" name="recommend" value="definitely" >
+       <label for="definitely" class="check-label">Definitely</label><br>
+       <input id="may" type="radio" name="recommend" value="maybe" >
+       <label for="may" class="check-label">Maybe</label><br>
+       <input id="not" type="radio" name="recommend" value="not-sure" >
+       <label for="not" class="check-label">Not Sure</label><br>
+
+       <label id="improve">What would you like to see improved?(Check all that apply)</label>
+       <input id="front" type="checkbox" value="front" >
+       <label for="font" class="radio-label">Font-End projects</label><br>
+       <input id="back" type="checkbox" value="back" >
+       <label for="back" class="radio-label">Back-End projects</label><br>
+       <input id="data" type="checkbox" value="data" >
+       <label for="data" class="radio-label">Data visualization</label><br>
+       <input id="challenges" type="checkbox" value="challenges" >
+       <label for="challenges" class="radio-label">Challenges</label><br><br>
+
+        <label for="">any comment or suggestions?</label>
+       <textarea placeholder="enter your comment here..."></textarea>
+
+       <input type="submit" id="submit"><br>
+    </form>
+</div>
+</body>
+</html>
